@@ -1,0 +1,13 @@
+{
+    "loan": {
+       "amount": 4000,
+       "term": 36
+    },
+    "person": {
+       "creditScore": 700
+    },
+    "vehicle": {
+       "year": 2014,
+       "mileage": 1000
+    }
+ }

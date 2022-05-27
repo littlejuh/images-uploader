@@ -1,0 +1,55 @@
+{
+  "name": "apr-calculator",
+  "version": "1.0.0",
+  "description": "Api responsible to returns the annual percentage rate (APR) for a vehicle loan.",
+  "author": "Andriele Menegotto <andriele.menegotto@gmail.com>",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && tsc && copyfiles -u 1 src/**/*.json dist",
+    "tsc": "tsc",
+    "lint": "tslint -p .",
+    "clean": "rimraf dist",
+    "sls:start": "npm run build && serverless offline -v --stage local",
+    "test:unit": "jest -w=1 --config ./test/jest.config.js --coverage --silent test/unit",
+    "test:integration": "jest --config ./test/jest.config.js --silent test/integration"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "engineStrict": true,
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "@types/hapi__joi": "^17.1.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "typescript-ioc": "^3.2.2",
+    "typescript-loggable": "^2.0.2",
+    "typescript-rest": "^3.0.4"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.10.1",
+    "@types/node-fetch": "^2.5.7",
+    "copyfiles": "^2.4.1",
+    "jest": "^27.0.5",
+    "rimraf": "^3.0.2",
+    "serverless": "^1.71.3",
+    "serverless-dotenv-plugin": "^2.4.2",
+    "serverless-http": "^2.7.0",
+    "serverless-offline": "^6.1.7",
+    "ts-jest": "^27.0.0",
+    "ts-node": "^8.10.1",
+    "ts-node-dev": "^1.1.8",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.5"
+  },
+  "keywords": [],
+  "license": "UNLICENSED"
+}
